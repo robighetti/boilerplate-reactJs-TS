@@ -9,11 +9,20 @@ interface SignInCredentials {
 
 interface AuthState {
   token: string;
-  operator: object;
+  operator: OperatorProps;
+}
+
+interface OperatorProps {
+  avatar: string;
+  avatar_url: string;
+  email: string;
+  id: string;
+  name: string;
+  type: string;
 }
 
 interface AuthContextProps {
-  operator: object;
+  operator: OperatorProps;
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }

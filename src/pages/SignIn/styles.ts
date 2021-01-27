@@ -24,7 +24,7 @@ export const Content = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  box-shadow: 0 0 8px #fa923f;
+  box-shadow: 0 0 8px #333;
 
   img {
     margin-top: 24px;
