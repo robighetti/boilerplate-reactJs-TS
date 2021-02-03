@@ -9,18 +9,17 @@ export default createGlobalStyle`
   }
 
   body {
-    color: #0d2c5b;
+    background: #312e38;
+    color: #fff;
     -webkit-font-smoothing: antialiased;
-
-    background-color: #fff;
   }
 
-  body, input, button, select, textarea {
-    font-family: 'Montserrat', serif;
+  body, input, button {
+    font-family: 'Roboto Slab', serif;
     font-size: 16px;
   }
 
-  h1,h2,h3,h4,h5,h6, strong {
+  h1, h2, h3, h4, h5, strong {
     font-weight: 500;
   }
 

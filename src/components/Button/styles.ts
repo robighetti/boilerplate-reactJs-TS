@@ -1,20 +1,28 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Container = styled.button`
-  background: #fa923f;
+  background: ${(props) => props.theme.colors.tertiary};
   height: 56px;
   border-radius: 10px;
   border: 0;
   padding: 0 16px;
-  color: #fff;
+  color: #312e38;
   width: 100%;
   font-weight: 500;
   margin-top: 16px;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  color: ${(props) => props.theme.colors.white};
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    transform: scale(1.03);
-    background: ${shade(0.2, '#fa923f')};
+    transform: scale(1.02);
+  }
+
+  svg {
+    margin-right: 16px;
   }
 `;

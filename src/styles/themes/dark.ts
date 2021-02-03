@@ -1,14 +1,18 @@
 export default {
   title: 'dark',
   colors: {
-    primary: '#0F2F59',
-    secondary: '#1D3A60',
-    tertiary: '#fa923f',
-    quaterly: '#8C2E0B',
+    primary: '#28262e',
+    secondary: '#3e3b47',
+    tertiary: '#ff9000',
+    quaterly: '#f4ede8',
+    disabled: '#666360',
 
     white: '#fff',
     black: '#0D0D0D',
-    gray: '#c9c9c9',
+    gray: '#999591',
+
+    background_rgba: [255, 255, 255],
+    background_transparent: 0.1,
 
     success_title: '#2e656a',
     success_background: '#e6fffa',

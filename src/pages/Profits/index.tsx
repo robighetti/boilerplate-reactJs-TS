@@ -7,11 +7,11 @@ import { List, ListItems } from '../../components/Custom';
 
 import { Container } from './styles';
 
-const Users: React.FC = () => {
+const Profits: React.FC = () => {
   return (
     <Container>
       <header>
-        <h1>Usuários Cadastrados</h1>
+        <h1>Receitas Cadastradas</h1>
         <Buttom>
           <FiPlus size={24} />
           Adicionar
@@ -58,4 +58,4 @@ const Users: React.FC = () => {
   );
 };
 
-export default Users;
+export default Profits;

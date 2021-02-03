@@ -4,11 +4,15 @@ export default {
     primary: '#fff',
     secondary: '#f4f4f4',
     tertiary: '#F27B35',
-    quaterly: '#0F2F59',
+    quaterly: '#8C2E0B',
+    disabled: '#666360',
 
     white: '#0D0D0D',
     black: '#fff',
     gray: '#c9c9c9',
+
+    background_rgba: [250, 146, 63],
+    background_transparent: 0.2,
 
     success_title: '#2e656a',
     success_background: '#e6fffa',

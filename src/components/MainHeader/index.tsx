@@ -1,27 +1,34 @@
-import React, { useMemo } from 'react';
-import emojis from '../../utils/emojis';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FiPower } from 'react-icons/fi';
 
 import { useAuth } from '../../hooks/auth';
-import Toggle from '../Toggle';
 
-import { Container, Profile, Welcome, UserName } from './styles';
+import { Container, Header, HeaderContent, Profile } from './styles';
 
 const MainHeader: React.FC = () => {
-  const { operator } = useAuth();
-
-  const emoji = useMemo(() => {
-    const index = Math.floor(Math.random() * emojis.length);
-    return emojis[index];
-  }, []);
+  const { signOut, user } = useAuth();
 
   return (
     <Container>
-      <Toggle />
+      <Header>
+        <HeaderContent>
+          <Profile>
+            <img src={user.avatar_url} alt={user.name} />
 
-      <Profile>
-        <Welcome>Olá, {emoji}</Welcome>
-        <UserName>{operator.name}</UserName>
-      </Profile>
+            <div>
+              <span>Bem-vindo, </span>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
+            </div>
+          </Profile>
+
+          <button type="button" onClick={signOut}>
+            <FiPower />
+          </button>
+        </HeaderContent>
+      </Header>
     </Container>
   );
 };

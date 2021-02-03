@@ -3,27 +3,28 @@ import { animated } from 'react-spring';
 
 interface ContainerProps {
   type?: 'success' | 'error' | 'info';
-  hasDescription: boolean;
+  hasDescription?: number;
 }
 
-const toastTypeVariations = {
+const toastTypesVariations = {
   info: css`
-    background: ${props => props.theme.colors.info_background};
-    color: ${props => props.theme.colors.info_title};
+    background: #ebf8ff;
+    color: #3172b7;
   `,
+
   success: css`
-    background: ${props => props.theme.colors.success_background};
-    color: ${props => props.theme.colors.success_title};
+    background: #e6fffa;
+    color: #2e656a;
   `,
+
   error: css`
-    background: ${props => props.theme.colors.error_background};
-    color: ${props => props.theme.colors.error_title};
+    background: #fddede;
+    color: #c53030;
   `,
 };
 
 export const Container = styled(animated.div)<ContainerProps>`
   width: 360px;
-
   position: relative;
   padding: 16px 30px 16px 16px;
   border-radius: 10px;
@@ -35,7 +36,7 @@ export const Container = styled(animated.div)<ContainerProps>`
     margin-top: 8px;
   }
 
-  ${props => toastTypeVariations[props.type || 'info']}
+  ${(props) => toastTypesVariations[props.type || 'info']}
 
   > svg {
     margin: 4px 12px 0 0;
@@ -62,7 +63,7 @@ export const Container = styled(animated.div)<ContainerProps>`
     color: inherit;
   }
 
-  ${props =>
+  ${(props) =>
     !props.hasDescription &&
     css`
       align-items: center;

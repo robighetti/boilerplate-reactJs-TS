@@ -8,10 +8,14 @@ declare module 'styled-components' {
       secondary: string;
       tertiary: string;
       quaterly: string;
+      disabled: string;
 
       white: string;
       black: string;
       gray: string;
+
+      background_rgba: Array;
+      background_transparent: number;
 
       success_title: string;
       success_background: string;

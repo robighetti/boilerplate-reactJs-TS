@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-
 import Tooltip from '../Tooltip';
 
 interface ContainerProps {
@@ -9,46 +8,43 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  background: rgba(250, 146, 63, 0.2);
-  border-radius: 10px;
-
-  border: 2px solid rgba(250, 146, 63, 0.2);
-  color: #666360;
-
-  padding: 16px;
-  width: 100%;
-
   display: flex;
   align-items: center;
+  background: #232129;
+  border-radius: 10px;
+  border: 2px solid #232129;
+  padding: 16px;
+  width: 100%;
+  color: #666360;
 
   & + div {
     margin-top: 8px;
   }
 
-  ${props =>
+  ${(props) =>
     props.isErrored &&
     css`
       border-color: #c53030;
     `}
 
-  ${props =>
+  ${(props) =>
     props.isFocused &&
     css`
-      color: #fa923f;
-      border-color: #fa923f;
+      color: #ff9000;
+      border-color: #ff9000;
     `}
 
-  ${props =>
+  ${(props) =>
     props.isFilled &&
     css`
-      color: #fa923f;
+      color: #ff9000;
     `}
 
   input {
     flex: 1;
     background: transparent;
     border: 0;
-    color: #0d2c5b;
+    color: #f4ede8;
 
     &::placeholder {
       color: #666360;
